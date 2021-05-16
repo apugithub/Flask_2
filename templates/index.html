@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block page_title %}{% endblock %}
+{% block body %}
+    {{ super() }}
+	
+	
+	{# only invoked when wrong UserID/Pass entered #}    <!--Added this as warning message -->
+    {% if wrong_id_pass %}
+    <div class="alert alert-dismissible alert-danger col-md-4 col-md-offset-4">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>Warning!</strong> Incorrect UserID/Pass.
+    </div>
+    {% endif %}
+
+  <!--  <p>This is a minimal web app developed with <a href="http://flask.pocoo.org/">Flask</a> framework.</p>
+    <p>The main purpose is to introduce how to implement the essential elements in web applications with Flask, including</p>
+    <ul>
+        <li>URL Building</li>
+        <li>Authentication with Sessions</li>
+        <li>Template & Template Inheritance</li>
+        <li>Error Handling</li>
+        <li>Integrating with Bootstrap</li>
+        <li>Interaction with Database (SQLite)</li>
+        <li>Invoking static resources</li>
+        <li>Upload files</li>
+    </ul>  -->
+	
+	<!--  <body background="{{ url_for('static', filename='img/background.jpg') }}"> </body>  -->
+	
+	<style>
+ body { 
+
+  background-image: url('../static/img/500.jpg');
+  background-repeat: no-repeat;
+  background-size: 950px 750px;
+  
+ 
+}
+   </style>
+	
+	
+	<!--<img src="{{ url_for('static', filename='img/background.jpg') }}" alt="Mountain"> -->
+
+    <!--<p>For more basic knowledge of Flask, you can refer to <a href="https://www.tutorialspoint.com/flask/">a tutorial on Tutorialspoint</a>.</p> -->
+{% endblock %}
+
+
