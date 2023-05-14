@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+{% block page_title %}Welcome {{ session.get("current_user") }} !{% endblock %}
+{% block body %}
+{{ super() }}
+<!-- <!doctype html>
+   <p style="margin-left: 2.5em;padding: 0 7em 2em 0;border-width: 0px; border-color: black; border-style:solid;"></p>
+     <table border = 2>
+       {% for key, value in result.items() %}
+   
+       <tr>
+          <th> {{ key }} </th>
+          <td> {{ value }} </td>
+       </tr>
+   
+       {% endfor %}
+    </table>  -->   <!-- this was my earlier table implementation -->
+	
+	
+<div class="item content" id="content_section10">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8 col-md-offset-2">
+            <div class="tableWrapper">
+               <table class="table table-striped table-hover">
+                  {% for key, value in result.items() %}
+                  <thead>
+                     <tr>
+                        <th style="color:red;"> {{ key }} </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td> {{ value }} </td>
+                     </tr>
+                  </tbody>
+                  {% endfor %}
+               </table>
+               <a style="color:blue;font-size:25px;" href="{{ url_for('phonenumber') }}"><strong>Go Back</strong></a>     <!-- this is for back button -->
+            </div>
+            <!-- /.tableWrapper -->				
+         </div>
+         <!-- ./col-md-8 -->
+      </div>
+      <!-- /.row -->
+   </div>
+   <!-- /.container -->
+</div>
+<!-- /.item -->
+
+
+
+
+<div class="item content" id="content_section10">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-6">
+            <div class="editContent">
+               <h3>Content Heading Here</h3>
+               <p>
+                  This is sample text. We can populate more relevant text later.
+               </p>
+            </div>
+            <a href="" class="btn btn-default btn-wide"><span class="fa fa-tasks"></span> Do Something Please</a>
+         </div>
+         <!-- /.col -->
+         <div class="col-md-5 col-md-offset-1">
+            <div class="tableWrapper">
+               <table class="table table-striped table-hover">
+                  <thead>
+                     <tr>
+                        <td>Rank</td>
+                        <td>Name</td>
+                        <td>Year</td>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>1</td>
+                        <td>The Shawshank Redemption</td>
+                        <td>1994</td>
+                     </tr>
+                     <tr>
+                        <td>2</td>
+                        <td>The Godfather</td>
+                        <td>1972</td>
+                     </tr>
+                     <tr>
+                        <td>3</td>
+                        <td>The Godfather: Part II</td>
+                        <td>1974</td>
+                     </tr>
+                     <tr>
+                        <td>4</td>
+                        <td>Pulp Fiction</td>
+                        <td>1994</td>
+                     </tr>
+                     <tr>
+                        <td>5</td>
+                        <td>The Good, the Bad and the Ugly</td>
+                        <td>1966</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+            <!-- /.tableWrapper -->				
+         </div>
+         <!-- ./col-md-8 -->
+      </div>
+      <!-- /.row -->
+   </div>
+   <!-- /.container -->
+</div>
+<!-- /.item -->
+
+
+{% endblock %}

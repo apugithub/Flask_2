@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Welcome {{ session.get("current_user") }} !{% endblock %}
+{% block body %}
+    {{ super() }}
+	
+
+<p style="margin-left: 2.5em;padding: 0 7em 2em 0;border-width: 0px; border-color: black; border-style:solid;"></p>  <!-- This line is to add extra gap -->
+<form action = "{{ url_for('phonenumber') }}" method = "POST">
+   <p style="color:green;font-size:20px;">Enter Phone Number (India Only) <input type = "text" name = "Name" /></p>
+   <p style="margin-left: 2.5em;padding: 0 7em 2em 0;border-width: 0px; border-color: black; border-style:solid;"></p>
+   <!--<p> <input type = "submit" value = "Submit" class="btn btn-default btn-wide" style="background-color:lightblue;background: #003366;"/></p>  *** earlier button-->
+   
+   <button class="btn-info" type = "submit"> Submit </a></button>
+</form>
+
+
+
+<!-- This stype is required for submit button -->
+<style>     
+
+.btn-info {
+  background: #0066cc;
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.btn-info:hover {
+  background: #003366;
+  transition: 0.5s background;
+}
+
+.btn-info a {
+  color: white;
+}
+</style>
+
+
+
+{% endblock %}
+
+
+
